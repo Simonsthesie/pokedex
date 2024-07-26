@@ -20,4 +20,32 @@ class PokemonView {
             this.pokemonListElement.appendChild(pokemonItem);
         });
     }
+
+    displayPokemonDetails(pokemon) {
+        this.pokemonDetailsElement.innerHTML = `
+            <h2>${pokemon.name}</h2>
+            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+            <p>Number: ${pokemon.id}</p>
+            <p>Type: ${pokemon.types.map(type => type.type.name).join(', ')}</p>
+            <p>Stats: ${pokemon.stats.map(stat => `${stat.stat.name}: ${stat.base_stat}`).join(', ')}</p>
+        `;
+        this.pokemonDetailsElement.style.display = 'block';
+    }
+
+    displayTypes(types) {
+        types.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type.name;
+            option.textContent = type.name.charAt(0).toUpperCase() + type.name.slice(1);
+            this.typeSelectElement.appendChild(option);
+        });
+    }
+
+    getSearchQuery() {
+        return this.searchInputElement.value.trim();
+    }
+
+    getSelectedType() {
+        return this.typeSelectElement.value;
+    }
 }
