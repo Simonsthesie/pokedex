@@ -1,4 +1,7 @@
 
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +29,12 @@ header {
 }
 
 header h1 {
+    font-family: 'Pokemon Solid', sans-serif;
     font-size: 2.5em;
-    color: #ff0000;
+    color: #ffcc03;
     text-shadow: 2px 2px #000;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(0, 63, 221);
 }
 
 #search {
