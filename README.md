@@ -1,5 +1,7 @@
 # Pokédex
 
+Lien d'hebergement: https://simonsthesie.github.io/pokedex/
+
 ## Description
 
 Ce projet est une application web Pokédex utilisant l'API PokeAPI pour afficher une liste de Pokémon avec des détails. L'application permet aux utilisateurs de rechercher des Pokémon par nom ou numéro, de filtrer les Pokémon par type, et de paginer à travers les résultats.
